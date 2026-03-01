@@ -30,11 +30,13 @@ async function main() {
   }
 }
 
-main();
+if (process.env.CLAWFREE_STANDALONE === 'true') main();
 
 export { createServer } from './server/index.js';
+export { loadConfig } from './config/index.js';
 export { AgentLoop } from './agent/loop.js';
-export { ClaudeRunner } from './agent/claude-runner.js';
+export { ClaudeRunner, killAllProcesses } from './agent/claude-runner.js';
 export { MemoryManager } from './memory/index.js';
 export { SkillLoader } from './skills/index.js';
 export { Scheduler } from './scheduler/index.js';
+export { closeBrowser } from './tools/index.js';

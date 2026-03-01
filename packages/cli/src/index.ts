@@ -6,6 +6,7 @@ import { skillCommand } from './commands/skill.js';
 import { cronCommand } from './commands/cron.js';
 import { memoryCommand } from './commands/memory.js';
 import { statusCommand } from './commands/status.js';
+import { onboardCommand } from './commands/onboard.js';
 
 const program = new Command();
 
@@ -21,5 +22,6 @@ program.addCommand(skillCommand);
 program.addCommand(cronCommand);
 program.addCommand(memoryCommand);
 program.addCommand(statusCommand);
+program.addCommand(onboardCommand);
 
 program.parse();

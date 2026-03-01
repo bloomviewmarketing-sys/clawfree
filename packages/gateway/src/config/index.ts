@@ -27,7 +27,7 @@ export function loadConfig(): ClawfreeConfig {
         }
       : undefined,
     workspace: {
-      dir: resolve(process.env.WORKSPACE_DIR || './workspace'),
+      dir: resolve(process.env.WORKSPACE_DIR || `${homedir()}/.clawfree/workspace`),
     },
     memory: {
       dir: resolve(process.env.MEMORY_DIR || `${homedir()}/.clawfree/memory`),
